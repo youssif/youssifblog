@@ -1,1 +1,7 @@
-%h1 Youssif Blog
+%h1= "#{@name}'s Blog"
+
+%p Hey what's up? Welcome to my blog. I'm Youssif.
+
+- @posts.each do |t,b|
+	%h2= t
+	%p= b
