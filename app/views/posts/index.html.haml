@@ -2,5 +2,14 @@
 
 %p Hey what's up? Welcome to my blog. I'm Youssif.
 
+/ =if flash[:notice].present?
+/ 	%p class="flash-notice"
+/ 		=flash[:notice]
+
+
+%ul
 - @posts.each do |post|
-	%a=link_to post.title, posts_path "\n"
+	<li>
+	%a=link_to post.title, post_path(post)
+	</li>
+

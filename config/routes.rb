@@ -2,6 +2,12 @@ YoussifsBlog::Application.routes.draw do
 
   get '/posts' => 'posts#index'
   get 'post/:id' => 'posts#show', as: 'post'
+  get '/posts/new' => 'posts#new'
+  post '/posts' =>'posts#create'
+  get 'posts/:id/edit' => 'posts#edit'
+  put 'post/:id' => 'posts#update'
+  delete 'post/:id' => 'posts#destroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
