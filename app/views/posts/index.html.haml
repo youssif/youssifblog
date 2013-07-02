@@ -2,9 +2,8 @@
 
 %p Hey what's up? Welcome to my blog. I'm Youssif.
 
-/ =if flash[:notice].present?
-/ 	%p class="flash-notice"
-/ 		=flash[:notice]
+-if flash[:notice].present?
+	%p=flash[:notice]
 
 
 %ul
