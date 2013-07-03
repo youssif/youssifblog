@@ -1,10 +1,10 @@
 YoussifsBlog::Application.routes.draw do
 
   get '/posts' => 'posts#index'
-  get 'post/:id' => 'posts#show', as: 'post'
   get '/posts/new' => 'posts#new'
+  get 'post/:id' => 'posts#show', as: 'post'
   post '/posts' =>'posts#create'
-  get 'posts/:id/edit' => 'posts#edit'
+  get 'posts/:id/edit' => 'posts#edit', as: 'edit_post'
   put 'post/:id' => 'posts#update'
   delete 'post/:id' => 'posts#destroy'
 
